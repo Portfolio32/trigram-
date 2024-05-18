@@ -34,6 +34,7 @@ P = (N + 1).float()
 P = P / P.sum(1, keepdim=True)
 
 
+# Calculating the negative log likelyhood
 ll = 0.0
 n = 0
 
@@ -48,11 +49,15 @@ for w in words:
         ll =+ loglikelyhood
         n += 1
 
+
 nll = -(ll / n)
 
 
 
+#sampling from the model 
 g = torch.Generator().manual_seed(2147483647)
+
+
 
 p = N.float()
 for i in range(10):
