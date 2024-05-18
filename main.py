@@ -32,7 +32,7 @@ for w in words:
 g = torch.Generator().manual_seed(2147483647)
 
 p = N.float()
-for i in range(5):
+for i in range(10):
 
     out = []
     ix = torch.multinomial(p.sum(dim=1), num_samples=1,replacement=True, generator=g).item()
@@ -46,8 +46,6 @@ for i in range(5):
     else:
         i += 1
         ix = stoi_pair[out[i-1][1] + itos[ix]]
-
-
         while True:
             if ix == 0:
                 break
