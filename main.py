@@ -62,11 +62,3 @@ for i in range(5):
 
 
 
-#p = torch.rand((3,3), generator=g)
-#how to sample from each row then input this into torhc.multinomial 
-#P = p / p.sum(dim= 1, keepdim=True)
-
-#this is how to sample from which row first I think 
-#print(p.sum(dim=1))
-#T = p.sum(dim=1) 
-#x = torch.multinomial(T, num_samples=10,replacement=True,generator=g)
